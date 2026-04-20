@@ -21,10 +21,10 @@ test.describe("Contact testcases", () => {
         await contact.validateContactCreated("fname","lname","dob","email","phone");
     });
 
-    test.only ("Contact Edit test", async ({ page, request }) => {
+    test ("Contact Edit test", async ({ page, request }) => {
         const Data = {
             "firstName": "Ram",
-            "lastName": "Prasad",
+            "lName": "Prasad",
             "birthdate": "1990-01-01",
             "email": "ram@gamil.com",
             "phone": "9876543210",
@@ -42,7 +42,7 @@ test.describe("Contact testcases", () => {
         await contact.contactEdit(contactTestData.contactEdit.firstName);
         await contact.validateContactCreated(contactTestData.contactEdit.firstName, contactTestData.contactEdit.lastName, contactTestData.contactEdit.dateOfBirth, contactTestData.contactEdit.email, contactTestData.contactEdit.phone, contactTestData.contactEdit.address, contactTestData.contactEdit.city, contactTestData.contactEdit.state, contactTestData.contactEdit.postal, contactTestData.contactEdit.country);
     });
-    test('contact Delete test',async ({page,request})=>{
+    test.only('contact Delete test',async ({page,request})=>{
         const Data={
             "firstName": "Baivab",
             "lastName": "Bhusal",

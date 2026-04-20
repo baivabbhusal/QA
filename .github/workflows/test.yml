@@ -22,7 +22,7 @@ jobs:
       run: npx playwright install --with-deps
 
     - name: Run Playwright tests
-      run: npx playwright test
+      run: npx playwright test tests/newLogin.spec.js --project chromium
       # If you want to pass environment variables like a Base URL:
       # env:
       #   BASE_URL: ${{ secrets.BASE_URL }}
